@@ -1,4 +1,4 @@
-# AI Influencer Agents for Blockchain Communities
+# MODE AI Influencer Agents for Blockchain Communities
 
 ## Problem Statement
 The rapid expansion of blockchain technologies and decentralized platforms has created a pressing need for real-time, accessible, and engaging community experiences. Users often struggle to keep up with blockchain news, token prices, community updates, and technical insights. This gap can hinder community engagement, reduce participation, and lead to misinformation. Additionally, navigating the fast-paced environment of blockchain communities across platforms like Telegram or X (formerly Twitter) often feels fragmented and overwhelming.
@@ -13,7 +13,7 @@ Our project aims to enhance the social experience within blockchain communities 
 - **Community Notifications**: Alerts and reminders about events, community milestones, or announcements.
 
 ## Project Details
-**Solution Name**: AI Influencer Agents for Blockchain Communities
+**Solution Name**: SocialDefi A Mode AI Influencer Agents for Blockchain Communities
 
 ### Target Platforms
 - **Telegram** (initial phase)
