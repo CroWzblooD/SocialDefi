@@ -239,6 +239,9 @@ This project bridges the gap between blockchain data and user engagement by leve
 
 This README now includes detailed sections on code overview while maintaining a professional tone throughout the document. It provides clear instructions on setup while emphasizing important integrations with Mode Network and Olas Network effectively.
 
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/15106762/68c6177b-7462-48e9-9b5f-e9f9c0baf1b9/paste.txt
-[2] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/15106762/33f0b953-06af-4baf-a6a2-f5720d70ad0c/paste.txt
+## Team Members
+
+**Team Name:** Squirtle 
+
+- **Ashish K Choudhary**  
+- **Krishna**  
