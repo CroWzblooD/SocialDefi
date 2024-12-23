@@ -222,15 +222,17 @@ To run this project locally:
 
 ## Snapshots
 
+![WhatsApp Image 2024-12-24 at 05 10 58_0bf0bfe3](https://github.com/user-attachments/assets/2e9cf076-f1ce-4724-b0ba-eafcab4a97c0)
+![WhatsApp Image 2024-12-24 at 05 10 58_0fcb59f3](https://github.com/user-attachments/assets/ff3178b1-2568-4738-8520-7d5732e0b994)
+![WhatsApp Image 2024-12-24 at 05 10 58_638c5cd3](https://github.com/user-attachments/assets/ee862686-40b5-4cc3-a0a4-372571a24ded)
+![WhatsApp Image 2024-12-24 at 05 10 58_c6f3e794](https://github.com/user-attachments/assets/bacb2521-9691-482f-9af4-476b9cc74314)
 ![WhatsApp Image 2024-12-24 at 05 11 00_7e268266](https://github.com/user-attachments/assets/cf63e9a8-199e-464b-b9e4-75109f25355e)
 ![WhatsApp Image 2024-12-24 at 05 11 00_5fe635ce](https://github.com/user-attachments/assets/a2c54bf1-0557-42ba-87a5-52b6dcb862c8)
 ![WhatsApp Image 2024-12-24 at 05 10 59_4487c2fc](https://github.com/user-attachments/assets/0aac4a8f-0eb3-4417-ae00-468de6c110d5)
 ![WhatsApp Image 2024-12-24 at 05 10 59_411e4729](https://github.com/user-attachments/assets/e297790c-6727-4186-8483-c0d7d9069c54)
 ![WhatsApp Image 2024-12-24 at 05 10 59_4f383de5](https://github.com/user-attachments/assets/4a660f75-767c-47f6-9c8f-2bbf10816d82)
-![WhatsApp Image 2024-12-24 at 05 10 58_c6f3e794](https://github.com/user-attachments/assets/bacb2521-9691-482f-9af4-476b9cc74314)
-![WhatsApp Image 2024-12-24 at 05 10 58_638c5cd3](https://github.com/user-attachments/assets/ee862686-40b5-4cc3-a0a4-372571a24ded)
-![WhatsApp Image 2024-12-24 at 05 10 58_0fcb59f3](https://github.com/user-attachments/assets/ff3178b1-2568-4738-8520-7d5732e0b994)
-![WhatsApp Image 2024-12-24 at 05 10 58_0bf0bfe3](https://github.com/user-attachments/assets/2e9cf076-f1ce-4724-b0ba-eafcab4a97c0)
+
+
 
 
 This project bridges the gap between blockchain data and user engagement by leveraging both Mode Network's capabilities and Olas' infrastructure—creating a thriving community through advanced AI-powered influencer agents.
