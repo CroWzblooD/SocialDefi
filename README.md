@@ -13,7 +13,7 @@ Our project aims to enhance the social experience within blockchain communities 
 - **Community Notifications**: Alerts and reminders about events, community milestones, or announcements.
 
 ## Project Details
-**Solution Name**: SocialDefi A Mode AI Influencer Agents for Blockchain Communities
+**Solution Name**: SocialDefi - A Mode AI Influencer Agents for Blockchain Communities
 
 ### Target Platforms
 - **Telegram** (initial phase)
@@ -30,7 +30,7 @@ Our project aims to enhance the social experience within blockchain communities 
 
 ## Methodology
 1. **Technology Stack**:
-   - **Programming Language**: Python or JavaScript (Node.js)
+   - **Programming Language**: Python
    - **Framework**: Telegram Bot API
    - **Data Fetching**: Integration with APIs like CoinGecko, CoinMarketCap.
    - **Machine Learning (Optional)**: For dynamic quiz question generation.
@@ -72,6 +72,16 @@ Data privacy will be a key focus to ensure user queries remain secure while inte
 - Premium subscriptions for advanced analytics.
 - Partnerships with blockchain projects for sponsored content.
 
+## Crossmint Integration
+This project integrates the Crossmint wallet functionality as a key feature. Crossmint provides an innovative way to create wallets and manage transactions seamlessly within the Telegram bot interface.
+
+### Where Crossmint is Used:
+- **Wallet Creation**: Users can create a new Crossmint wallet directly through the bot.
+- **Balance Checking**: Users can check their wallet balances in real-time.
+- **Token Sending**: Enables users to send tokens directly from their Crossmint wallets.
+
+For more information about Crossmint, visit their official website at [Crossmint](https://crossmint.com/) or check their documentation [here](https://docs.crossmint.com/).
+
 ## Olas Integration
 This project utilizes the Olas network as a foundational layer for enhanced performance in decentralized applications. Olas provides a robust framework for building scalable DApps on Ethereum Layer 2 solutions. The integration of Olas is crucial in this project as it allows the bot to leverage its capabilities in processing transactions efficiently while ensuring low latency and high throughput.
 
@@ -100,12 +110,14 @@ The core functionality of the bot is encapsulated within the `ModeBot` class. Be
 
 ```python
 import os
+import json
+import aiohttp
 import google.generativeai as genai
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, filters, ContextTypes
 from dotenv import load_dotenv
 from web3 import Web3
-from datetime import datetime, timedelta
+from datetime import datetime
 ```
 
 ### Initialization
@@ -114,23 +126,21 @@ The bot initializes necessary configurations including environment variables for
 
 ```python
 load_dotenv()
-genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
 w3 = Web3(Web3.HTTPProvider(os.getenv('MODE_RPC_URL')))
+genai.configure(api_key=os.getenv('CROSSMINT_API_KEY'))  # Configure Crossmint API Key here
 ```
 
 ### Main Bot Class
 
-The `ModeBot` class manages all functionalities including fetching network stats, handling user commands, processing AI analysis requests, managing quizzes, and setting up alerts.
+The `ModeBot` class manages all functionalities including fetching network stats, handling user commands, processing AI analysis requests, managing quizzes, setting up alerts, and integrating Crossmint wallet functionalities.
 
 ```python
 class ModeBot:
     def __init__(self):
-        self.news_cache = []
+        self.crossmint_api_key = os.getenv('CROSSMINT_API_KEY')
+        self.crossmint_client_id = os.getenv('CROSSMINT_CLIENT_ID')
+        self.user_wallets = {}
         self.conversation_history = {}
-        self.price_alerts = {}
-        self.network_stats_cache = {}
-        self.cache_timestamp = None
-        self.cache_duration = timedelta(minutes=5)
 ```
 
 ### Key Methods
@@ -151,11 +161,22 @@ async def get_network_stats(self):
 ```python
 async def start_command(self, update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
-        [InlineKeyboardButton("📊 Network Stats", callback_data='stats'), InlineKeyboardButton("🤖 AI Analysis", callback_data='ai_analysis')],
-        # Other buttons...
+        [InlineKeyboardButton("🔑 Create Wallet", callback_data='create_wallet'),
+         InlineKeyboardButton("💰 Check Balance", callback_data='check_balance')],
+        [InlineKeyboardButton("📊 Mode Stats", callback_data='stats'),
+         InlineKeyboardButton("🤖 AI Analysis", callback_data='ai_analysis')],
+        [InlineKeyboardButton("🎯 Send Tokens", callback_data='send_tokens'),
+         InlineKeyboardButton("🎯 Take Quiz", callback_data='quiz')]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
-    await update.message.reply_text("Welcome message...", reply_markup=reply_markup)
+    await update.message.reply_text(
+        "Welcome to Mode Network AI Wallet Assistant! 🤖\n\n"
+        "I can help you with:\n"
+        "• Creating and managing your Crossmint wallet 🔑\n"
+        "• Sending and receiving tokens 💸\n"
+        "• Checking balances and transactions 💰\n"
+        "• AI-powered market analysis 📊\n\n"
+        "Choose an option to get started!", reply_markup=reply_markup)
 ```
 
 3. **AI Analysis**
@@ -181,8 +202,10 @@ async def quiz_handler(self, update: Update, context: ContextTypes.DEFAULT_TYPE)
 ```python
 def run(self):
     app = Application.builder().token(os.getenv('TELEGRAM_BOT_TOKEN')).build()
-    app.add_handler(CommandHandler('start', self.start_command))
-    # Other handlers...
+    
+    # Add handlers...
+    
+    print("Mode Network AI Wallet Assistant is starting...")
     app.run_polling(allowed_updates=Update.ALL_TYPES)
 ```
 
@@ -202,14 +225,15 @@ To run this project locally:
     ```plaintext
     TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
     GEMINI_API_KEY=your_gemini_api_key_here
-    MODE_RPC_URL=https://mainnet.mode.network
-    MODE_CONTRACT_ADDRESS=0x70B1053B873028ed1Bd3411A4e0d43ED6E276B78
+    MODE_RPC_URL=https://mainnet.mode.network 
+    CROSSMINT_API_KEY=your_crossmint_api_key 
+    CROSSMINT_CLIENT_ID=your_crossmint_client_id 
     ```
 
 3. Install the necessary packages using pip:
 
     ```bash
-    pip install python-telegram-bot==20.7 python-dotenv==1.0.0 web3==6.11.3 google-generativeai==0.3.1 aiohttp==3.9.1
+    pip install python-telegram-bot==20.7 python-dotenv==1.0.0 web3==6.11.3 google-generativeai==0.3.1 aiohttp==3.9.1 crossmint-client==0.1.4 
     ```
 
 4. Ensure you have your API keys set up correctly in the `.env` file before running the bot.
@@ -217,8 +241,15 @@ To run this project locally:
 5. Start the bot:
 
     ```bash
-    python your_bot_file.py
+    python your_bot_file.py 
     ```
+
+This project bridges the gap between blockchain data and user engagement by leveraging both Mode Network's capabilities and Olas' infrastructure—creating a thriving community through advanced AI-powered influencer agents.
+
+---
+
+This README now includes detailed sections on code overview while maintaining a professional tone throughout the document including Crossmint integration effectively while providing clear instructions on setup along with placeholders for images related to your project
+
 
 ## Snapshots
 
