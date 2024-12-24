@@ -42,6 +42,11 @@ Our project aims to enhance the social experience within blockchain communities 
    - Phase 3: Integrating additional features like stats and notifications.
    - Phase 4: User testing and feedback collection.
    - Phase 5: Expanding to other platforms based on feedback.
+  
+3. **Technology Stack**:
+   ![mermaid-diagram-2024-12-24-205650](https://github.com/user-attachments/assets/b9caf7fe-427f-43f3-b0d5-ccf866ab8fb0)
+
+   
 
 ### Data Sources
 - Blockchain news aggregators
