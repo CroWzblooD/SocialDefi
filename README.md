@@ -244,13 +244,6 @@ To run this project locally:
     python your_bot_file.py 
     ```
 
-This project bridges the gap between blockchain data and user engagement by leveraging both Mode Network's capabilities and Olas' infrastructure—creating a thriving community through advanced AI-powered influencer agents.
-
----
-
-This README now includes detailed sections on code overview while maintaining a professional tone throughout the document including Crossmint integration effectively while providing clear instructions on setup along with placeholders for images related to your project
-
-
 ## Snapshots
 
 ![WhatsApp Image 2024-12-24 at 05 10 58_0bf0bfe3](https://github.com/user-attachments/assets/2e9cf076-f1ce-4724-b0ba-eafcab4a97c0)
@@ -264,13 +257,12 @@ This README now includes detailed sections on code overview while maintaining a 
 ![WhatsApp Image 2024-12-24 at 05 10 59_4f383de5](https://github.com/user-attachments/assets/4a660f75-767c-47f6-9c8f-2bbf10816d82)
 
 
-
-
 This project bridges the gap between blockchain data and user engagement by leveraging both Mode Network's capabilities and Olas' infrastructure—creating a thriving community through advanced AI-powered influencer agents.
 
 ---
 
-This README now includes detailed sections on code overview while maintaining a professional tone throughout the document. It provides clear instructions on setup while emphasizing important integrations with Mode Network and Olas Network effectively.
+This README now includes detailed sections on code overview while maintaining a professional tone throughout the document including Crossmint integration effectively while providing clear instructions on setup along with placeholders for images related to your project
+
 
 ## Team Members
 
